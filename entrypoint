@@ -1,0 +1,14 @@
+#!/bin/bash
+echo "Starting moving SpaceMMOCore..."
+
+cd /target || exit 1
+if find . -type f -name 'SpaceMMOCore-*.jar' -exec sh -c 'x="{}"; cp "$x" "/data/plugins/SpaceMMOCore.jar"' \; 2>/dev/null;
+then
+    echo "SpaceMMOCore file copied correctly."
+else
+    echo "Error encountered during file copy. Exiting script."
+    exit 1
+fi
+
+cd /data || exit 1
+/start
