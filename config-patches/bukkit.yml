@@ -1,0 +1,15 @@
+{
+    "patches": [
+        {
+            "file": "/data/bukkit.yml",
+            "ops": [
+                {
+                    "$set": {
+                        "path": "$.connection-throttle",
+                        "value": 0
+                    }
+                },
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "patches": [
+        {
+            "file": "/data/spigot.yml",
+            "ops": [
+                {
+                    "$set": {
+                        "path": "$.timeout-time",
+                        "value": 31536000 # One year
+                    }
+                },
+            ]
+        }
+    ]
+}

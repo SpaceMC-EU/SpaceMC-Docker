@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "Starting loading SpaceMC docker..."
+
+jarName="$JAR_NAME"
+if [ -n "$jarName" ]; then
+    cd /target || exit 1
+
+    destination="/data/plugins/$jarName.jar"
+
+    find . -type f -name "$jarName-*.jar" 2>/dev/null | while read -r file; do
+        cp "$file" "$destination"
+    done
+
+    if [ -e "$destination" ]; then
+        echo "$jarName file copied correctly."
+    else
+        echo "Error encountered during file copy. Exiting script."
+        exit 1
+    fi
+else
+  echo "'JAR_NAME' env variable not found. Not moving jar file"
+fi
+
+cd /data || exit 1
+/start
