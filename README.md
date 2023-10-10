@@ -17,9 +17,7 @@ services:
         image: spacemmocore
         environment:
             VERSION: 1.20.1
-            JAR_NAME: <You output JAR file prefix>
-            UID: 1001
-            GID: 1001
+            JAR_NAME: <Your compiled plugin name prefix>
         ports:
             - "25565:25565"
         volumes:
@@ -28,6 +26,7 @@ services:
         tty: true
         restart: "no"
 ```
+In `enviroment` section you can use [itzg/minecraft-server's variables](https://docker-minecraft-server.readthedocs.io/en/latest/variables/)
 
 ## Features
  - Bukkit and spigot config patches
