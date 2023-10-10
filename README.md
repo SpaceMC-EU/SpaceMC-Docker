@@ -14,7 +14,7 @@ We are using awesome [itzg/minecraft-server](https://docker-minecraft-server.rea
 version: '3.3'
 services:
     minecraft:
-        image: spacemmocore
+        image: norbiros/spacemc:latest
         environment:
             VERSION: 1.20.1
             JAR_NAME: <Your compiled plugin name prefix>
