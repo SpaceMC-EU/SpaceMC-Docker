@@ -5,8 +5,9 @@
             "ops": [
                 {
                     "$set": {
-                        "path": "$.timeout-time",
-                        "value": 31536000 # One year
+                        "path": "$.settings.timeout-time",
+                        "value": 31536000, # One year
+                        "value-type": "int"
                     }
                 },
             ]

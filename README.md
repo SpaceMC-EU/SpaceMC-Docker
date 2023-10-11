@@ -22,6 +22,7 @@ services:
             - "25565:25565"
         volumes:
             - ./server:/data
+            - ./target:/target
         stdin_open: true
         tty: true
         restart: "no"

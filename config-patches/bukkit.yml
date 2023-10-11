@@ -5,7 +5,8 @@
             "ops": [
                 {
                     "$set": {
-                        "path": "$.connection-throttle",
+                        "path": "$.settings",
+                        "key": "connection-throttle",
                         "value": 0
                     }
                 },
