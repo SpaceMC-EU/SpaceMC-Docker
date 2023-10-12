@@ -34,3 +34,6 @@ In `enviroment` section you can use [itzg/minecraft-server's variables](https://
  - A lot of environment variables for easier development
  - Move compiled plugin to `plugins/`
  - Support for Java Debugger
+
+## EULA
+By using this image you agree to Minecraft's EULA!
