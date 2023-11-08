@@ -6,6 +6,7 @@ if [ -n "$jarName" ]; then
     cd /target || exit 1
 
     destination="/data/plugins/$jarName.jar"
+    mkdir "/data/plugins/"
 
     find . -type f -name "$jarName-*.jar" 2>/dev/null | while read -r file; do
         cp "$file" "$destination"
