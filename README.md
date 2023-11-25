@@ -2,11 +2,10 @@
 Docker image used in all SpaceMC minecraft plugins. <br/>
 We are using awesome [itzg/minecraft-server](https://docker-minecraft-server.readthedocs.io/en/latest/) for PaperMC server in Docker.
 
-> **Important**
+> [!IMPORTANT]  
 >
-> This image is created for our use, so we won't support 
-> features that we don't need. So we only support **Maven**
-> for automatic file movement.
+> This image is created for our use, so we won't support features that we don't need.<br/>
+> So we only support **Maven** for automatic file movement.
 >
 
 ## Usage
@@ -20,6 +19,7 @@ services:
             JAR_NAME: <Your compiled plugin name prefix>
         ports:
             - "25565:25565"
+            - "5005:5005"
         volumes:
             - ./server:/data
             - ./target:/target
