@@ -1,4 +1,4 @@
-FROM itzg/minecraft-server:latest
+FROM itzg/minecraft-server:java21
 LABEL authors="SpaceMC"
 
 ENV TYPE=PAPER \
